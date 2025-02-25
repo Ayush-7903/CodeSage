@@ -21,7 +21,7 @@ function App() {
   }, [])
 
   async function reviewCode() {
-    const response = await axios.post('https://codesage.onrender.com/ai/get-review', { code })
+    const response = await axios.post('acceptable-quietude-production.up.railway.app/ai/get-review', { code })
     setReview(response.data)
   }
 
