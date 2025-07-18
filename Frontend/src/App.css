@@ -44,6 +44,13 @@ main .left {
   color: #f8f8f2; /* Light text */
 }
 
+.code-scrollable {
+  height: 400px;
+  max-height: 90vh;
+  overflow: auto;
+  margin-bottom: 3.5rem; /* To ensure space for the review button */
+}
+
 /* Review Button */
 main .left .review {
   position: absolute;
@@ -62,6 +69,26 @@ main .left .review {
 main .left .review:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+.review[disabled] {
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-top: 3px solid #6a11cb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Right Side - Review Section */
