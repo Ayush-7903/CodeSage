@@ -23,7 +23,7 @@ Thanks for using our service!`)
   async function reviewCode() {
     setLoading(true)
     try {
-      const response = await axios.post('https://codesage-1.onrender.com', { code })
+      const response = await axios.post('https://codesage-1.onrender.com/ai/get-review', { code })
       setReview(response.data)
     } finally {
       setLoading(false)
